@@ -12,13 +12,13 @@ This script automatically backs up your server files and databases to Google Dri
 ## Installation
 
 ### English Installation
-To install with default English language, run:
+To install with English language:
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/Odidak1/autobackup/refs/heads/ENG/install.sh)
 ```
 
 ### Indonesian Installation
-To install with Indonesian language, run:
+To install with Indonesian language:
 ```bash
 Coming Soon
 ```
@@ -31,5 +31,3 @@ Once installed, the script automatically schedules daily backups. Configuration 
 
 - Rclone
 - Internet connection for Google Drive uploads
-
-For further customization and configuration details, please see the comments within the script
