@@ -11,16 +11,16 @@ This script automatically backs up your server files and databases to Google Dri
 
 ## Installation
 
-### Indonesian Installation
-To install with Indonesian prompts, run:
-```bash
-bash <(curl -s https://installation.odidak.my.id/backup-id.sh)
-```
-
 ### English Installation
 To install with default English prompts, run:
 ```bash
-bash <(curl -s https://installation.odidak.my.id/backup-en.sh)
+bash <(curl -s https://raw.githubusercontent.com/Odidak1/autobackup/refs/heads/ENG/install.sh)
+```
+
+### Indonesian Installation
+To install with Indonesian prompts, run:
+```bash
+Coming Soon
 ```
 
 ## Usage
