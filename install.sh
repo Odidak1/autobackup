@@ -132,7 +132,7 @@ for folder in "\${BASE_DIR}"/*; do
             FILE_SIZE=\$(stat -c%s "\${BACKUP_FILE}")
             TOTAL_SIZE=\$((TOTAL_SIZE + FILE_SIZE))
             
-            if rclone copy "\${BACKUP_FILE}" "\${RCLONE_REMOTE_NAME}:\${GDRIVE_DATE_DIR}/\${FOLDER_NAME}.\${BACKUP_FORMAT}"; then
+            if rclone copy "\${BACKUP_FILE}" "\${RCLONE_REMOTE_NAME}:\${GDRIVE_DATE_DIR}"; then
                 echo "Backup folder \${FOLDER_NAME} successfully saved to \${GDRIVE_DATE_DIR}/\${FOLDER_NAME}.\${BACKUP_FORMAT}"
                 SUCCESS_COUNT=\$((SUCCESS_COUNT + 1))
             else
@@ -259,7 +259,7 @@ BACKUP_FILE="\$TEMP_DIR/\$DB_NAME.sql"
 if mysqldump -u "\$DB_USER" -p"\$DB_PASS" -h "\$DB_HOST" "\$DB_NAME" > "\$BACKUP_FILE"; then
     echo "Database backup successful."
     
-    if rclone copy "\$BACKUP_FILE" "\$RCLONE_REMOTE_NAME:\$GDRIVE_DATE_DIR/\$DB_NAME.sql"; then
+    if rclone copy "\$BACKUP_FILE" "\$RCLONE_REMOTE_NAME:\$GDRIVE_DATE_DIR"; then
         echo "Database backup successfully saved to \$GDRIVE_DATE_DIR/\$DB_NAME.sql"
         
         if [[ -n "\$WEBHOOK_URL" ]]; then
